@@ -12,6 +12,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -29,11 +32,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/333/video-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -120,11 +123,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -149,6 +147,7 @@
       <workItem from="1646783767842" duration="30022000" />
       <workItem from="1646874696648" duration="10249000" />
       <workItem from="1646958294535" duration="4276000" />
+      <workItem from="1647013727215" duration="949000" />
     </task>
     <servers />
   </component>
@@ -212,10 +211,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1024" height="2" key="GridCell.Tab.2.right/0.0.1536.816@0.0.1536.816" timestamp="1646882297547" />
-    <state x="272" y="0" key="SettingsEditor" timestamp="1646410678416">
+    <state x="272" y="0" key="SettingsEditor" timestamp="1647014678465">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="272" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1646410678416" />
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1647014678465" />
     <state x="461" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1646958435192">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
