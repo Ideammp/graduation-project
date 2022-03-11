@@ -49,7 +49,8 @@
             </div>
         </div>
 
-        <div class="hrFont">
+        <%--暂时进行注释--%>
+       <%-- <div class="hrFont">
             <div></div>
             <span>分集列表</span>
             <div></div>
@@ -61,7 +62,7 @@
                     <li>
                         <div class="episode-div">
                             <c:if test="${video.finished == true and video.totalEpisode ==1}">
-                                <span>全 1 集</span>
+                                <span>全 2 集</span>
                             </c:if>
                             <c:if test="${video.totalEpisode !=1}">
                                 <span>第 ${episode.episode} 集</span>
@@ -74,7 +75,7 @@
                     </li>
                 </C:forEach>
             </ul>
-        </div>
+        </div>--%>
     </div>
 
     <jsp:include page="/jsp/common/footer.jsp"/>

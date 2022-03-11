@@ -49,7 +49,8 @@
             </div>
         </div>
 
-        <div class="hrFont">
+        <%--暂时进行注释--%>
+       <%-- <div class="hrFont">
             <div></div>
             <span>分集列表</span>
             <div></div>
@@ -74,7 +75,7 @@
                     </li>
                 </C:forEach>
             </ul>
-        </div>
+        </div>--%>
     </div>
 
     <jsp:include page="/jsp/common/footer.jsp"/>
