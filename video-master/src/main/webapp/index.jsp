@@ -181,7 +181,7 @@
                     selectType = $(this).children().attr("typeId");
                     selectCategory = 0;
                     /*根据选择的频道获取下一级的选择条件,如点击动漫，则获取动漫所有类型并展示*/
-                    var categoryResult = " <span>类型：</span> " + " <li style=\"background: #4EBBF9\"><a href=\"javascript:void (0);\" style=\"color: #fff;\" categoryId='0'>全部</a></li> ";
+                    var categoryResult = " <span>口味标签：</span> " + " <li style=\"background: #4EBBF9\"><a href=\"javascript:void (0);\" style=\"color: #fff;\" categoryId='0'>全部</a></li> ";
                     switch ($(this).children().html()) {
 
                         case '全部': $("#select2").html(categoryResult);break;
