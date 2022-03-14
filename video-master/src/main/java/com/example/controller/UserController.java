@@ -48,6 +48,9 @@ public class UserController {
         jsonObject.put("code",0);
         jsonObject.put("count",count);
         jsonObject.put("data",userList);
+
+        System.out.println(jsonObject.toString());
+
         return jsonObject.toString();
     }
 

@@ -7,7 +7,7 @@
 %>
 <html>
 <head>
-    <title>视频详情</title>
+    <title>${video.name}</title>
     <base href="<%=basePath%>">
     <link rel="stylesheet" href="static/plugins/layui/css/layui.css"  media="all">
     <script src="static/plugins/layui/layui.js"></script>

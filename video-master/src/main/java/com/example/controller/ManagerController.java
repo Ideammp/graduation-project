@@ -98,6 +98,7 @@ public class ManagerController {
         jsonObject.put("code",0);
         jsonObject.put("count",count);
         jsonObject.put("data",userList);
+        System.out.println(jsonObject.toString());
         return jsonObject.toString();
     }
 
@@ -120,12 +121,17 @@ public class ManagerController {
         return "manager/userlist";
     }
 
+
+
     @RequestMapping("user/detail/{id}")
     public String userDetail(@PathVariable("id")int id, HttpServletRequest request){
         User user = userServiceImpl.getUserById(id);
         request.setAttribute("user",user);
         return "manager/user_detail";
     }
+
+
+
     @RequestMapping("user/delete/{id}")
     @ResponseBody
     public int userDelete(@PathVariable("id")int id, HttpServletRequest request){
@@ -512,4 +518,13 @@ public class ManagerController {
         map.put("result",categoryServiceImpl.insCategory(name,pid));
         return map;
     }
+
+
+    /*跳转页面到校内公告管理*/
+
+    @RequestMapping("schoolBulletin/list")
+    public String schoolBulletin(){
+        return "manager/bulletin_school";
+    }
+
 }

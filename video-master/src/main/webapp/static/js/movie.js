@@ -22,7 +22,7 @@ function showVideo(uri,pageNum,pageSize) {
                 var video = " <li>\n" +
                     " <a href='video/detail/"+videos[i].id+"' target='_blank'> <img src= \"" + videos[i].imgSrc + "\" title=\"" + videos[i].name + "\" alt=\"" + videos[i].name + "\"></a><br>\n" +
                     " <a href='video/detail/"+videos[i].id+"' class=\"video-name-text\" title='" + videos[i].name + "' target='_blank'><p class=\"video-name-text\">" + videos[i].name + "</p></a>\n" +
-                    " <p class=\"video-description-text\">主演：" + videos[i].starring + "</p>\n" +
+                    " <p class=\"video-description-text\">厨师：" + videos[i].starring + "</p>\n" +
                     " </li>";
                 //一个ui包含6个li
                 if (i % 6 == 0) {

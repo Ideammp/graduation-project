@@ -120,6 +120,21 @@
     <%--底部--%>
     <jsp:include page="/jsp/common/footer.jsp"/>
 
+    <script>
+        layer.tab({
+            area: ['600px', '300px'],
+            tab: [{
+                title: 'TAB1',
+                content: '内容1'
+            }, {
+                title: 'TAB2',
+                content: '内容2'
+            }, {
+                title: 'TAB3',
+                content: '内容3'
+            }]
+        });
+    </script>
 
 <script type="text/javascript">
 /*---------------------------初始化、声明变量和方法 start---------------------------------------------------------*/
