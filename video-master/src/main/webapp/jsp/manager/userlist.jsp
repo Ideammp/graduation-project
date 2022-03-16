@@ -182,6 +182,7 @@
             if (layEvent == 'delete'){
                 layer.confirm('确认删除用户 \"'+ data.username + '\" ?', {title:'提示'}, function(index){
                     $.get('manager/user/delete/'+data.id,function (data) {
+                        console(data);
                         if (data >= 1){
                             layer.msg("删除成功");
                             obj.del();

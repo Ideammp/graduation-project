@@ -6,14 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>公告管理</title>
@@ -155,6 +152,49 @@
         </div>
     </div>
 
+    <%--新增公告--%>
+    <div style="display: none" id="addForm" >
+        <form class="layui-form videoAddForm" style="width: 500px;" method="get" action="manager/video/add">
+            <div class="layui-form-item">
+                <label class="layui-form-label">公告标题：</label>
+                <div class="layui-input-block">
+                    <input id="name2" type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入告示标题" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">告示发布时间：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="year" class="layui-input" id="year2" placeholder="yyyy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">告示内容：</label>
+                <div class="layui-input-block">
+                    <textarea name="description" id="description" placeholder="请输入告示的内容：" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block" style="margin-top: 50px;">
+                    <button type="submit" id="submit" class="layui-btn" style="margin-right: 60px;" lay-submit="" lay-filter="demo1">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script type="text/html" id="toolbarLeft">
+        <div class="layui-inline" title="添加菜品" lay-event="addSchoolBulletin">
+            <i class="layui-icon layui-icon-add-1" style="color: #77746e">
+            </i>
+        </div>
+    </script>
 
 
     <script>
@@ -165,17 +205,26 @@
         });
 
         //javaScript代码区域
-        layui.use(['element','table','layer'], function(){
+        layui.use(['element','table','layer','jquery','form','laydate','upload'], function(){
 
             var element = layui.element
                 ,table = layui.table
-                ,layer = layui.layer;
+                ,layer = layui.layer
+                ,$ = layui.jquery
+                ,form = layui.form
+                ,laydate = layui.laydate
+                ,upload = layui.upload;
+
+
+
+
 
 
             table.render({
                 elem: '#demo'
                 ,url:'bulletin/getSchoolAll'
                 ,toolbar: 'true'
+                ,toolbar: '#toolbarLeft'
                 ,cols: [[
                     {type:'checkbox', width:60, title: '全选'}
                     ,{type:'numbers', width:60, title: '序号'}
@@ -196,11 +245,12 @@
             });
 
 
-            table.on('tool(test)', function(obj) {
+            table.on('tool(demo)', function(obj) {
                 var data = obj.data; //获得当前行数据
                 var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
                 if (layEvent == 'delete'){
                     layer.confirm('确认删除标题为 \"'+ data.schoolBulletinTitle + '\"的告示吗 ?', {title:'提示'}, function(index){
+
                         $.get('bulletin/school/delete/'+data.id,function (data) {
                             if (data >= 1){
                                 layer.msg("删除成功");
@@ -213,6 +263,56 @@
                     });
                 }
             })
+
+
+            /*添加告示
+            * 表单提交
+            * */
+
+
+
+            table.on('toolbar(demo)', function(obj){
+                switch(obj.event){
+                    case 'addSchoolBulletin':    //添加校内告示
+                        layer.open({
+                            type:1
+                            ,title:'添加菜品'
+                            ,area:['700px','720px']
+                            ,content:$("#addForm")
+                            ,success:function () {
+
+                                $("#submit").click(function () {
+                                    var year = $("#year2").val();
+                                    var name = $("#name2").val();
+                                    if (name == '' || name == null){
+                                        layer.msg("请填写口味名称！");
+                                    }else if (year == '' || year == null){
+
+                                        layer.msg("请填写")
+
+                                    }else{
+                                        $.ajax({
+                                            url:"manager/category/addCategory"
+                                            ,type:'post'
+                                            ,data:{'name':name,'pid':$(".select").val()}
+                                            ,success:function (data) {
+                                                if (data.result == 1){
+                                                    layer.msg("添加成功!");
+                                                }
+                                            }
+                                        });
+                                    }
+                                    return false;
+                                })
+
+
+                            }
+                        });
+                        break;
+                }
+            });
+
+
 
 
 

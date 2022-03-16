@@ -49,9 +49,13 @@ public String schoolBulletinDetail(@PathVariable("id")int id,HttpServletRequest 
 
     /*根据id删除校内告示信息*/
 @RequestMapping("school/delete/{id}")
+@ResponseBody//保留数据到页面
 public int schoolBulletinDelete(@PathVariable("id")int id,HttpServletRequest request){
     return bulletinSchoolService.deleteById(id);
 }
+
+
+
 
 
 

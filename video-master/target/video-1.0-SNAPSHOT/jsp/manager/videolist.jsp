@@ -524,6 +524,8 @@ layui.use(['element','table','layer','jquery','form','laydate','upload'], functi
         //支持所有基础参数
     });
 
+
+
     //表格头工具栏事件
     table.on('toolbar(demo)', function(obj){
         switch(obj.event){
