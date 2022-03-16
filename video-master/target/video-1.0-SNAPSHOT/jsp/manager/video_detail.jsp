@@ -7,7 +7,7 @@
 %>
 <html>
 <head>
-    <title>视频详情</title>
+    <title>${video.name}</title>
     <base href="<%=basePath%>">
     <link rel="stylesheet" href="static/plugins/layui/css/layui.css"  media="all">
     <script src="static/plugins/layui/layui.js"></script>
@@ -134,6 +134,8 @@
                         </div>
                     </div>
                 </div>
+
+                <%--暂时进行注释操作--%>
 
                 <div class="episode-block">
                     <div style="border: #beb9b0 solid 1px;margin-top: 30px;border-radius: 5px;">

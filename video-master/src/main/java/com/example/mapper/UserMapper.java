@@ -10,6 +10,9 @@ public interface UserMapper {
     User selectByNameAndPwd(String username,String password);
     User selectByName(String username);
     List<User> selectAll(int start,int limit);
+
+
+
     int selectCount();
     int insert(User user);
 
@@ -34,4 +37,6 @@ public interface UserMapper {
 
     @Delete("delete from user where id = #{param1}")
     int delById(int id);
+
+
 }

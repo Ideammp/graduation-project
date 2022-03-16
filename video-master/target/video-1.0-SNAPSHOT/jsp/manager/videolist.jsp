@@ -171,7 +171,7 @@
                     <h2 style="margin:10px 0 10px 15px;">菜品列表</h2>
                 </div>
                 <div style="padding:20px;">
-                    <table  id="demo" lay-filter="demo">
+                    <table  id="demo" lay-filter="demo" >
                         <thead>
                         <tr>
                             <th lay-data="{type:'checkbox', width:60}">全选</th>
@@ -458,7 +458,7 @@
 </div>
 
 <script type="text/html" id="toolbarLeft">
-    <div class="layui-inline" title="添加菜品" lay-event="addVideo">
+    <div class="layui-inline" title="添加菜品" lay-event="addCuisine">
         <i class="layui-icon layui-icon-add-1" style="color: #77746e">
         </i>
     </div>
@@ -524,13 +524,15 @@ layui.use(['element','table','layer','jquery','form','laydate','upload'], functi
         //支持所有基础参数
     });
 
+
+
     //表格头工具栏事件
     table.on('toolbar(demo)', function(obj){
         switch(obj.event){
-            case 'addVideo':    //添加视频
+            case 'addCuisine':    //添加视频
                 layer.open({
                     type:1
-                    ,title:'添加视频'
+                    ,title:'添加菜品'
                     ,area:['700px','720px']
                     ,content:$("#addForm")
                     ,success:function () {

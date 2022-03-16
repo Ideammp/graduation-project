@@ -78,9 +78,9 @@
         <!-- 内容主体区域 -->
 
         <div class="detail-div">
-            <div class="avatar-div">
+           <%-- <div class="avatar-div">
                 <img class="avatar-img" src="${user.img}" alt="头像" title="头像">
-            </div>
+            </div>--%>
             <div class="info-div">
                 <div>
                     <span>用户名：</span>

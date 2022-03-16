@@ -5,16 +5,16 @@
     body .login-class .layui-layer-btn .layui-layer-btn1{background:#999;}
 </style>
 <%--顶部--%>
-<div class="movie-header all-container" >
+<div class="movie-header all-container layui-bg-orange" >
     <div class="layui-container" style="width: 80%;" >
         <%--logo--%>
         <a href="index.jsp" style="position: relative">
-            <img src="static/images/logo.png" alt="logo">
+            <img src="static/images/logo01.png" alt="logo">
             <span class="movie-logo-font">大学餐厅菜品一览</span>
         </a>
 
         <%--关键字搜索input输入框--%>
-        <div class="layui-input-inline" style="margin: 10px auto;text-align:center;width: 70%;display: inline-block" >
+        <div class="layui-anim layui-anim-scaleSpring  layui-input-inline  layui-layer-iframe" style="margin: 10px auto;text-align:center;width: 70%;display: inline-block" >
             <input type="text" name="title" placeholder="请输入菜品名称" class="input-search"/><%--
     --%><button type="button" class="layui-btn layui-btn-normal" onclick="showSearchTip()" style="vertical-align: middle;border-bottom-right-radius: 5px;border-top-right-radius: 5px; " >
             <img src="static/images/search.png" height="13px" style="vertical-align: middle">
@@ -27,7 +27,7 @@
         </div>
 
         <%--用户头像--%>
-        <ul class="layui-nav fly-nav-user" style="background: #000;">
+        <ul class="layui-nav fly-nav-user layui-bg-red" >
             <li class="layui-nav-item">
                 <a class="fly-nav-avatar" href="javascript:">
                     <img src="static/images/用户.png">
@@ -43,6 +43,8 @@
     <a href="jsp/manager/login.jsp" target="_blank" style="position: absolute;right: 50px;top: 0;line-height: 60px;">
         <span style="text-align: center;vertical-align: middle;color: #fff;">进入后台</span>
     </a>
+
+
 
 <script src="static/plugins/layui/lay/modules/layer.js"></script>
 <script>
@@ -117,14 +119,14 @@
                             tipsResult += "<a href='javascript:void(0)'>&nbsp;&nbsp;&nbsp;"+data[i].name+"</a>"
                         }
                         searchTipDiv.html(tipsResult);
-                        searchTipDiv.css('display','inline-block');
+                        searchTipDiv.css('display','inline-block');// 模糊查询到结果后使用样式
                     }else{
-                        searchTipDiv.css('display','none');
+                        searchTipDiv.css('display','none');//模糊查询无结果使用的样式
                     }
                 }
             });
         }else{
-            searchTipDiv.css('display','none');
+            searchTipDiv.css('display','none');//输入框内无输入使用的样式 与 模糊查询一致
         }
     }
 
