@@ -35,5 +35,10 @@ public class BulletinSchoolServiceImpl implements BulletinSchoolService {
         return schoolBulletinMapper.delById(id);
     }
 
+    @Override
+    public int addNewBulletin(String title, String content, String date) {
+        return schoolBulletinMapper.addNewSchoolBulletin(title,content,date);
+    }
+
 
 }

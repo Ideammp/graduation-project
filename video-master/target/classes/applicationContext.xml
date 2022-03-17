@@ -41,7 +41,7 @@ http://www.springframework.org/schema/tx https://www.springframework.org/schema/
             <tx:method name="ins*"/>
             <tx:method name="upd*"/>
             <tx:method name="del*"/>
-            <tx:method name="*" read-only="true"/>
+            <tx:method name="*" read-only="false"/>
         </tx:attributes>
     </tx:advice>
     <aop:config>

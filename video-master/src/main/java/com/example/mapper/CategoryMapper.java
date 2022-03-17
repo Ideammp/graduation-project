@@ -53,4 +53,6 @@ public interface CategoryMapper {
 
     @Insert("insert into category values(default,#{param1},#{param2})")
     int addCategory(String name, Integer pid);
+
+
 }

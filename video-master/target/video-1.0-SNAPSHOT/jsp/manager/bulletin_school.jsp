@@ -154,11 +154,11 @@
 
     <%--新增公告--%>
     <div style="display: none" id="addForm" >
-        <form class="layui-form videoAddForm" style="width: 500px;" method="get" action="manager/video/add">
+        <form class="layui-form videoAddForm" style="width: 500px;">
             <div class="layui-form-item">
                 <label class="layui-form-label">公告标题：</label>
                 <div class="layui-input-block">
-                    <input id="name2" type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入告示标题" class="layui-input">
+                    <input id="title" type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入告示标题" class="layui-input">
                 </div>
             </div>
 
@@ -190,7 +190,7 @@
 
 
     <script type="text/html" id="toolbarLeft">
-        <div class="layui-inline" title="添加菜品" lay-event="addSchoolBulletin">
+        <div class="layui-inline" title="添加告示" lay-event="addSchoolBulletin">
             <i class="layui-icon layui-icon-add-1" style="color: #77746e">
             </i>
         </div>
@@ -276,25 +276,26 @@
                     case 'addSchoolBulletin':    //添加校内告示
                         layer.open({
                             type:1
-                            ,title:'添加菜品'
+                            ,title:'添加告示'
                             ,area:['700px','720px']
                             ,content:$("#addForm")
                             ,success:function () {
 
                                 $("#submit").click(function () {
                                     var year = $("#year2").val();
-                                    var name = $("#name2").val();
-                                    if (name == '' || name == null){
-                                        layer.msg("请填写口味名称！");
+                                    var title = $("#title").val();
+                                    var description = $("#description").val();
+                                    if (title == '' || title == null){
+                                        layer.msg("请填写告示标题！！！");
                                     }else if (year == '' || year == null){
-
-                                        layer.msg("请填写")
-
-                                    }else{
+                                        layer.msg("请填写告示发布的时间！！！")
+                                    }else if (description == ''||description == null){
+                                        lay.msg("请填写告示内容！！！")
+                                    } else{
                                         $.ajax({
-                                            url:"manager/category/addCategory"
+                                            url:"bulletin/school/addNewBulletin"
                                             ,type:'post'
-                                            ,data:{'name':name,'pid':$(".select").val()}
+                                            ,data:{'title':title,'content':description,'date':year}
                                             ,success:function (data) {
                                                 if (data.result == 1){
                                                     layer.msg("添加成功!");

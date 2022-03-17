@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.CanteenMapper">
+
+    <select id="selectCanteenAll" resultType="com.example.pojo.CanteenBulletin">
+        select * from canteen_bulletin limit #{param1},#{param2}
+    </select>
+
+    <select id="selectCount" resultType="java.lang.Integer">
+         select count(*) from canteen_bulletin
+    </select>
+
+</mapper>

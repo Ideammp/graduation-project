@@ -9,7 +9,7 @@
     <div class="layui-container" style="width: 80%;" >
         <%--logo--%>
         <a href="index.jsp" style="position: relative">
-            <img src="static/images/logo.png" alt="logo">
+            <img src="static/images/logo01.png" alt="logo">
             <span class="movie-logo-font">想看视频</span>
         </a>
 

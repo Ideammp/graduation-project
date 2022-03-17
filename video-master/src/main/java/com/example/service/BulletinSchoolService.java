@@ -17,4 +17,8 @@ public interface BulletinSchoolService {
 
     //根据id删除校内告示信息
     int deleteById(int id);
+
+    //添加新的学校告示
+    int addNewBulletin(String title,String content,String date);
+
 }

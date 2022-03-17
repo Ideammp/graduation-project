@@ -2,6 +2,7 @@ package com.example.mapper;
 
 import com.example.pojo.SchoolBulletin;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -21,6 +22,10 @@ public interface SchoolBulletinMapper {
     /* 根据id删除校内告示信息*/
     @Delete("delete from school_bulletin where id = #{param1}")
     int delById(int id);
+
+    /*插入新公告*/
+    @Insert("insert into school_bulletin values(default,#{param1},#{param2},#{param3})")
+    int addNewSchoolBulletin(String title,String content,String date);
 
 
 }

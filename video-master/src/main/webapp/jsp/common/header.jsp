@@ -9,7 +9,7 @@
     <div class="layui-container" style="width: 80%;" >
         <%--logo--%>
         <a href="index.jsp" style="position: relative">
-            <img src="static/images/logo01.png" alt="logo">
+            <img src="static/images/logo0112.png" alt="logo">
             <span class="movie-logo-font">大学餐厅菜品一览</span>
         </a>
 

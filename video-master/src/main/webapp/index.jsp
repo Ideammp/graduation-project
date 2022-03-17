@@ -115,7 +115,7 @@
         <%--分页按钮--%>
         <div id="pagebtn" class="pagebtnDiv"></div>
 
-    </div>
+        </div>
 
     <%--底部--%>
     <jsp:include page="/jsp/common/footer.jsp"/>
