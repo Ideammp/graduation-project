@@ -25,27 +25,27 @@
             <div carousel-item>
                 <div>
                     <a href="javascript:">
-                        <img src="file/video/images/轮播图/功夫.jpg" width="100%" height="400px" alt="功夫">
+                        <img src="file/video/images/健身餐.jpeg" width="100%" height="400px" alt="健生餐">
                     </a>
                 </div>
                 <div>
                     <a href="javascript:">
-                        <img src="file/video/images/轮播图/狄仁杰2四大天王.jpg" alt="狄仁杰2四大天王" width="100%" height="400px">
+                        <img src="file/video/images/家常小炒.jpeg" alt="家常小炒" width="100%" height="400px">
                     </a>
                 </div>
                 <div>
                     <a href="javascript:">
-                        <img src="file/video/images/轮播图/过春天.jpg" alt="过春天" width="100%" height="400px">
+                        <img src="file/video/images/葱油拌面.jpeg" alt="葱油拌面" width="100%" height="400px">
                     </a>
                 </div>
                 <div>
                     <a href="javascript:">
-                        <img src="file/video/images/轮播图/慎重勇者.jpg" alt="慎重勇者" width="100%" height="400px">
+                        <img src="file/video/images/肉丁炒菜.jpeg" alt="肉丁炒菜" width="100%" height="400px">
                     </a>
                 </div>
                 <div>
                     <a href="javascript:">
-                        <img src="file/video/images/轮播图/超人高中生们.jpg" alt="超人高中生们" width="100%" height="400px">
+                        <img src="file/video/images/重庆小面.jpeg" alt="重庆小面" width="100%" height="400px">
                     </a>
                 </div>
             </div>
@@ -122,16 +122,14 @@
 
     <script>
         layer.tab({
-            area: ['600px', '300px'],
+            area: ['800px', '300px'],
             tab: [{
-                title: 'TAB1',
-                content: '内容1'
+                title: '校内告示:我们打败新冠疫情啦',
+                content: '今天学校为庆祝战胜新冠疫情，师生每人发10000元红包！！！' +
+                    '羽毛球场限时免费开放七天，每场限制人数 20人！！！' + '健身房限时开放七天，每场限制人数30人！！！'
             }, {
-                title: 'TAB2',
-                content: '内容2'
-            }, {
-                title: 'TAB3',
-                content: '内容3'
+                title: '食堂告示：免费吃，免费吃！！',
+                content: '为庆祝学校解除封禁，食堂限时变成自助餐厅，限时3天，奶茶，小食，饮品无限自助，快来吃吧，学校承担你们的体重'
             }]
         });
     </script>

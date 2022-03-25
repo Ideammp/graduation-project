@@ -15,8 +15,8 @@
 </head>
 <body>
     <div class="register-header register-container">
-        <img src="static/images/logo.png" style="vertical-align: middle;" alt="logo">
-        <span class="movie-logo-font">想看视频</span>
+        <img src="static/images/logo0112.png" style="vertical-align: middle;" alt="logo">
+        <span class="movie-logo-font">大学餐厅菜品一览</span>
         <span class="vertical-line"></span>
         <label>用户注册</label>
     </div>

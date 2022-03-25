@@ -3,10 +3,11 @@ package com.example.service.impl;
 import com.example.mapper.CanteenMapper;
 import com.example.pojo.CanteenBulletin;
 import com.example.service.BulletinCanteenService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+@Service
 public class BulletinCanteenServiceImpl implements BulletinCanteenService {
 
     @Resource

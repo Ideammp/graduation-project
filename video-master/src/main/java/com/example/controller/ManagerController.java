@@ -527,4 +527,8 @@ public class ManagerController {
         return "manager/bulletin_school";
     }
 
+    /*跳转页面到餐厅公告管理*/
+    @RequestMapping("canteenBulletin/list")
+    public String canteenBulletin(){ return "manager/bulletin_canteen";}
+
 }

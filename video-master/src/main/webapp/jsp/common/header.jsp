@@ -13,6 +13,7 @@
             <span class="movie-logo-font">大学餐厅菜品一览</span>
         </a>
 
+
         <%--关键字搜索input输入框--%>
         <div class="layui-anim layui-anim-scaleSpring  layui-input-inline  layui-layer-iframe" style="margin: 10px auto;text-align:center;width: 70%;display: inline-block" >
             <input type="text" name="title" placeholder="请输入菜品名称" class="input-search"/><%--
@@ -22,9 +23,11 @@
         </button>
         </div>
 
+
         <%--模糊查询div--%>
         <div class="searchTipDiv">
         </div>
+
 
         <%--用户头像--%>
         <ul class="layui-nav fly-nav-user layui-bg-red" >
@@ -38,6 +41,7 @@
             </li>
         </ul>
     </div>
+
 
     <%--后台登录链接--%>
     <a href="jsp/manager/login.jsp" target="_blank" style="position: absolute;right: 50px;top: 0;line-height: 60px;">

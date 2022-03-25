@@ -51,25 +51,41 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item layui-this">
+                    <a href="jsp/manager/index.jsp">首页</a>
+                </li>
+                <li class="layui-nav-item">
                     <a class="" href="javascript:;">用户管理</a>
                     <dl class="layui-nav-child">
-                        <dd class="layui-this"><a href="javascript:;">用户列表</a></dd>
+                        <dd><a href="manager/user/list">用户列表</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">视频管理</a>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">菜品管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">视频列表</a></dd>
+                        <dd class="layui-this"><a href="manager/video/list">菜品列表</a></dd>
                     </dl>
                 </li>
+
+
                 <li class="layui-nav-item">
-                    <a href="javascript:;">视频分类管理</a>
+                    <a href="javascript:;">菜品分类管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="manager/category/list">视频分类列表</a></dd>
+                        <dd><a href="manager/category/list">菜品分类列表</a></dd>
                         <dd><a href="manager/category/add">添加分类</a></dd>
                     </dl>
                 </li>
+
+                <%--公告管理--%>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">公告管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
+                        <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
+                    </dl>
+                </li>
+
+
             </ul>
         </div>
     </div>

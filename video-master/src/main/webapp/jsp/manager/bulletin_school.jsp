@@ -56,11 +56,12 @@
             </ul>
         </div>
         <%--左侧导航内容--%>
+
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                    <li class="layui-nav-item">
+                    <li class="layui-nav-item layui-this">
                         <a href="jsp/manager/index.jsp">首页</a>
                     </li>
                     <li class="layui-nav-item">
@@ -78,21 +79,22 @@
 
 
                     <li class="layui-nav-item">
-                    <a href="javascript:;">菜品分类管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="manager/category/list">菜品分类列表</a></dd>
-                        <dd><a href="manager/category/add">添加分类</a></dd>
-                    </dl>
+                        <a href="javascript:;">菜品分类管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="manager/category/list">菜品分类列表</a></dd>
+                            <dd><a href="manager/category/add">添加分类</a></dd>
+                        </dl>
                     </li>
 
-<%--公告管理--%>
+                    <%--公告管理--%>
                     <li class="layui-nav-item">
                         <a href="javascript:;">公告管理</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">校内公告管理</a></dd>
-                            <dd><a href="">添加公告</a></dd>
+                            <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
+                            <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
                         </dl>
                     </li>
+
 
                 </ul>
             </div>
@@ -250,6 +252,7 @@
                 var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
                 if (layEvent == 'delete'){
                     layer.confirm('确认删除标题为 \"'+ data.schoolBulletinTitle + '\"的告示吗 ?', {title:'提示'}, function(index){
+
 
                         $.get('bulletin/school/delete/'+data.id,function (data) {
                             if (data >= 1){

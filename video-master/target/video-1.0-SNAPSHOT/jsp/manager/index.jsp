@@ -85,9 +85,15 @@
                     <a href="javascript:;">公告管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
-                        <dd><a href="">添加公告</a></dd>
+
+                        <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
                     </dl>
                 </li>
+
+
+
+
+
 
             </ul>
         </div>

@@ -60,7 +60,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-this">
                     <a href="jsp/manager/index.jsp">首页</a>
                 </li>
                 <li class="layui-nav-item">
@@ -87,12 +87,14 @@
 
                 <%--公告管理--%>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">公告管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">校内公告管理</a></dd>
-                        <dd><a href="">添加公告</a></dd>
-                    </dl>
-                </li>
+                <a href="javascript:;">公告管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
+                    <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
+                </dl>
+            </li>
+
+
 
             </ul>
         </div>
@@ -105,7 +107,7 @@
         <span class="layui-breadcrumb">
               <a href="">菜品后台</a>
               <a href="">公告管理</a>
-              <a href="">校内公告管理</a>
+              <a href="">餐厅公告管理</a>
             </span>
 
         <div style="padding: 15px;">
@@ -145,7 +147,7 @@
                     <h2 style="margin:10px 0 10px 15px;">校内公告管理</h2>
                 </div>
                 <div style="padding:20px;">
-                    <div id="demo" lay-filter="demo"></div>
+                    <div id="demo01" lay-filter="demo"></div>
                 </div>
             </div>
         </div>
@@ -249,8 +251,7 @@
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
             if (layEvent == 'delete'){
-                layer.confirm('确认删除标题为 \"'+ data.canteenBulletinTitle + '\"的告示吗 ?', {title:'提示'}, function(index){
-
+                layer.confirm(data.id+'确认删除标题为 \"'+ data.canteenBulletinTitle + '\"的告示吗 ?', {title:'提示'}, function(index){
                     $.get('bulletin/canteen/delete/'+data.id,function (data) {
                         if (data >= 1){
                             layer.msg("删除成功");

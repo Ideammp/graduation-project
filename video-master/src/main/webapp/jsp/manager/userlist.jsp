@@ -55,7 +55,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-this">
                     <a href="jsp/manager/index.jsp">首页</a>
                 </li>
                 <li class="layui-nav-item">
@@ -84,10 +84,11 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">公告管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">校内公告管理</a></dd>
-                        <dd><a href="">添加公告</a></dd>
+                        <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
+                        <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
                     </dl>
                 </li>
+
 
             </ul>
         </div>

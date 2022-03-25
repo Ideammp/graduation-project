@@ -64,7 +64,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-this">
                     <a href="jsp/manager/index.jsp">首页</a>
                 </li>
                 <li class="layui-nav-item">
@@ -93,10 +93,11 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">公告管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">校内公告管理</a></dd>
-                        <dd><a href="">添加公告</a></dd>
+                        <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
+                        <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
                     </dl>
                 </li>
+
 
             </ul>
         </div>
@@ -110,20 +111,20 @@
             <div class="info-div">
                 <div>
                     <span>标题：</span>
-                    <span>${cbulletin.schoolBulletinTitle}</span>
+                    <span>${cbulletin.canteenBulletinTitle}</span>
                 </div>
                 <div>
                     <span>告示内容：</span>
-                    <span>${cbulletin.schoolBulletinContent}</span>
+                    <span>${cbulletin.canteenBulletinContent}</span>
                 </div>
                 <div>
                     <span>告示发布时间：</span>
-                    <span>${cbulletin.schoolUplodDate}</span>
+                    <span>${cbulletin.canteenUplodDate}</span>
                 </div>
 
 
                 <div style="width: 100%;text-align: center;margin-top: 10px;">
-                    <a style="margin: 0 auto;display: inline-block; height: 30px;line-height: 30px; color: #fff; text-align: center; width: 50px;background: #4EBBF9;" href="jsp/manager/bulletin_school.jsp">返回</a>
+                    <a style="margin: 0 auto;display: inline-block; height: 30px;line-height: 30px; color: #fff; text-align: center; width: 50px;background: #4EBBF9;" href="jsp/manager/bulletin_canteen.jsp">返回</a>
                 </div>
             </div>
         </div>

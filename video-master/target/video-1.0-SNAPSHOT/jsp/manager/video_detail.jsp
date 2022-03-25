@@ -49,9 +49,9 @@
     <div class="layui-header">
         <div class="layui-logo">大学餐厅菜单推荐后台管理系统</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
-        <a class="layui-layout-left title" style="">
-            视频详情
-        </a>
+       <%-- <a class="layui-layout-left title" style="">
+            详情
+        </a>--%>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
@@ -76,7 +76,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-this">
                     <a href="jsp/manager/index.jsp">首页</a>
                 </li>
                 <li class="layui-nav-item">
@@ -86,18 +86,31 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;">视频管理</a>
+                    <a href="javascript:;">菜品管理</a>
                     <dl class="layui-nav-child">
-                        <dd class="layui-this"><a href="manager/video/list">视频列表</a></dd>
+                        <dd class="layui-this"><a href="manager/video/list">菜品列表</a></dd>
                     </dl>
                 </li>
+
+
                 <li class="layui-nav-item">
-                    <a href="javascript:;">视频分类管理</a>
+                    <a href="javascript:;">菜品分类管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="manager/category/list">视频分类列表</a></dd>
+                        <dd><a href="manager/category/list">菜品分类列表</a></dd>
                         <dd><a href="manager/category/add">添加分类</a></dd>
                     </dl>
                 </li>
+
+                <%--公告管理--%>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">公告管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="manager/schoolBulletin/list">校内公告管理</a></dd>
+                        <dd><a href="manager/canteenBulletin/list">餐厅公告管理</a></dd>
+                    </dl>
+                </li>
+
+
             </ul>
         </div>
     </div>
@@ -106,7 +119,7 @@
         <!-- 内容主体区域 -->
         <div class="detail-div">
             <div class="avatar-div">
-                <h2 >视频详情</h2>
+                <h2 >菜品详情</h2>
             </div>
             <div class="info-div">
                 <div style="display: flex;">
@@ -114,7 +127,7 @@
                     <div class="description-div">
                         <h1>${video.name}</h1>
                         <div class="description-line">
-                            <span>演员：</span>
+                            <span>厨师：</span>
                             <span>${video.starring}</span>
                         </div>
                         <div class="description-line">
@@ -124,8 +137,8 @@
                         <div class="description-line">
                             <span>状态：</span>
                             <span>
-                                <c:if test="${video.finished}">已完结  全${video.totalEpisode}集</c:if>
-                                <c:if test="${!video.finished}">连载中  连载至${video.currentEpisode}集</c:if>
+                                <c:if test="${video.finished}">售完  售出${video.totalEpisode}份</c:if>
+                                <c:if test="${!video.finished}">火热售卖中  还剩${video.currentEpisode}份</c:if>
                             </span>
                         </div>
                         <div class="description-line">
@@ -137,7 +150,7 @@
 
                 <%--暂时进行注释操作--%>
 
-                <div class="episode-block">
+                <%--<div class="episode-block">
                     <div style="border: #beb9b0 solid 1px;margin-top: 30px;border-radius: 5px;">
                         <div style="border-bottom: #beb9b0 solid 1px;height:40px;">
                             <h2 style="margin:10px 0 10px 15px;">分集列表</h2>
@@ -174,7 +187,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div>--%>
 
                 <div style="width: 100%;text-align: center;margin-top: 10px;">
                     <a class="btn" style="" href="manager/video/list">返回</a>
